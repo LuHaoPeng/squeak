@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+<div class="container login">
+    <div class="photo"></div>
+    <form>
+        <div class="form-group" id="div_username">
+            <input id="username" class="form-input" type="text" required>
+            <label for="username" class="float-label">账号</label>
+            <div class="error-message">
+                账号不存在
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24h-24z" fill="none"></path>
+                        <path d="M1 21h22l-11-19-11 19zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path>
+                    </svg>
+                </i>
+            </div>
+        </div>
+        <div class="form-group" id="div_password">
+            <input id="password" class="form-input" type="password" required>
+            <label for="password" class="float-label">密码</label>
+            <div class="error-message">
+                密码错误
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24h-24z" fill="none"></path>
+                        <path d="M1 21h22l-11-19-11 19zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path>
+                    </svg>
+                </i>
+            </div>
+        </div>
+        <button class="btn btn-primary float-right" type="submit" id="btn_login">
+            <i class="fa fa-refresh fa-spin" id="login_loading" style="display: none;"></i> 登录
+        </button>
+    </form>
+    <a class="settings" id="btn_settings">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-settings"></use>
+        </svg>
+    </a>
+</div>
+<script src="../../js/login.js"></script>
+</body>
+</html>

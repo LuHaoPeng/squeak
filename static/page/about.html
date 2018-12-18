@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+<div class="container">
+    <img class="d-block w-75 mx-auto mt-3" src="../img/icon.png"/>
+    <div class="app-name text-center my-1">Squeak</div>
+    <div class="text-center text-secondary">0.0.1</div>
+    <div class="text-center text-secondary">卢浩鹏</div>
+    <div class="text-center text-secondary">nsdictionary@qq.com</div>
+    <div class="text-center text-secondary mt-2">Copyright &copy; 2018 卢浩鹏.保留所有权利.</div>
+</div>
+<script>
+    window.$ = window.jQuery = require('jquery')
+    require('bootstrap')
+    const {ipcRenderer} = require('electron')
+    $('html').on('click',()=>{
+        ipcRenderer.send('about-window-return')
+    })
+</script>
+</body>
+</html>

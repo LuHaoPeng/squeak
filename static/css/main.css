@@ -1,0 +1,71 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+}
+
+a.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.toolbar {
+    background-color: #f0f0f0;
+    border-bottom: solid 1px #ccc;
+    flex: 0 0 auto;
+}
+
+.tool-button {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.tool-button:not(.disabled) {
+    cursor: pointer;
+}
+
+.tool-button:not(.disabled):hover {
+    background-color: #d8e6f2;
+}
+
+.tool-button:not(.disabled):active {
+    background-color: #c0dcf3;
+}
+
+.tool-button span {
+    font-size: 0.75em;
+    -webkit-user-select: none;
+}
+
+.tool-button .icon {
+    font-size: 2em;
+}
+
+.content {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.content .row {
+    flex: 1 0 auto;
+}
+
+#tree {
+    border-right: solid 2px #f0f0f0;
+    -webkit-user-select: none;
+    overflow: auto;
+}
+
+#div_trade {
+    overflow: auto;
+}

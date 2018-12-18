@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <form class="col pt-3">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">工单号</div>
+                </div>
+                <input type="text" id="input_trade_no" class="form-control" title="工单号" readonly>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">领料</div>
+                </div>
+                <input type="text" id="input_consume" pattern="[0-9]+" class="form-control" title="请输入正整数" required>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">出货</div>
+                </div>
+                <input type="text" id="input_produce" pattern="[0-9]+" class="form-control" title="请输入正整数" required>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">工单时间</div>
+                </div>
+                <input type="text" id="input_trade_time" class="form-control" title="工单时间" readonly>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">操作员</div>
+                </div>
+                <input type="text" id="input_operator" class="form-control" title="操作员" readonly>
+            </div>
+            <button class="btn btn-primary float-right" type="submit" id="btn_submit">
+                <i class="fa fa-refresh fa-spin" id="submit_loading" style="display: none;"></i> 提交
+            </button>
+        </form>
+    </div>
+</div>
+<script src="../../js/trade.js"></script>
+</body>
+</html>

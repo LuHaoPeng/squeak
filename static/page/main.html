@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-table/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../../node_modules/jstree/dist/themes/default/style.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+<div class="container-fluid toolbar d-flex flex-row">
+    <a class="tool-button" id="tool_btn_create">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-create"></use>
+        </svg>
+        <span>新建工单</span>
+    </a>
+    <a class="tool-button disabled" id="tool_btn_edit">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-edit"></use>
+        </svg>
+        <span>编辑工单</span>
+    </a>
+    <a class="tool-button disabled" id="tool_btn_delete">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-delete"></use>
+        </svg>
+        <span>删除工单</span>
+    </a>
+    <hr>
+    <a class="tool-button" id="tool_btn_logout">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-logout"></use>
+        </svg>
+        <span>切换账号</span>
+    </a>
+</div>
+<div class="container-fluid content">
+    <div class="row">
+        <div class="col-2" id="tree">加载中...</div>
+        <div class="col" id="div_trade">
+            <table id="table_trade"></table>
+        </div>
+    </div>
+</div>
+<script src="../../js/main.js"></script>
+</body>
+</html>

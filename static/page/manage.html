@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-table/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+<div class="container-fluid toolbar d-flex flex-row">
+    <a class="tool-button" id="tool_btn_create">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-add-user"></use>
+        </svg>
+        <span>添加账号</span>
+    </a>
+    <a class="tool-button disabled" id="tool_btn_edit">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-edit"></use>
+        </svg>
+        <span>重置密码</span>
+    </a>
+    <a class="tool-button disabled" id="tool_btn_delete">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-delete"></use>
+        </svg>
+        <span>删除账号</span>
+    </a>
+    <hr>
+    <a class="tool-button" id="tool_btn_logout">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-logout"></use>
+        </svg>
+        <span>切换账号</span>
+    </a>
+</div>
+<div class="container-fluid content">
+    <div class="row">
+        <div class="col" id="div_account">
+            <table id="table_account"></table>
+        </div>
+    </div>
+</div>
+<script src="../../js/manage.js"></script>
+</body>
+</html>

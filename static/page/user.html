@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <form class="col pt-3">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">账号</div>
+                </div>
+                <input type="text" id="input_username" pattern="[A-Za-z0-9_\-\u4e00-\u9fa5]+"
+                       class="form-control" title="可输入中英文、数字、下划线、短杠" required>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">密码</div>
+                </div>
+                <input type="text" class="form-control" value="123456" title="密码" readonly>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">部门</div>
+                </div>
+                <select title="部门" class="custom-select" id="select_type" autocomplete="off" required>
+                    <option></option>
+                    <option value="1">裁剪</option>
+                    <option value="2">车间</option>
+                    <option value="3">后道</option>
+                    <option value="4">仓库</option>
+                    <option value="5">销售</option>
+                    <option value="0" disabled>领导(暂不支持)</option>
+                </select>
+            </div>
+            <button class="btn btn-primary float-right" type="submit" id="btn_submit">
+                <i class="fa fa-refresh fa-spin" id="submit_loading" style="display: none;"></i> 提交
+            </button>
+        </form>
+    </div>
+</div>
+<script src="../../js/user.js"></script>
+</body>
+</html>
